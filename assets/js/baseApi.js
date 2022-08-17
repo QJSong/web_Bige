@@ -12,7 +12,7 @@ $.ajaxPrefilter(function (options) {
     //全局统一挂载 
     //阻止用户在没有登录的情况下 访问index.html 页面
     options.complete = function (res) {
-        console.log(res);
+        // console.log(res);
         //responseJSON 里的值 来判断
         if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
             //清空 token

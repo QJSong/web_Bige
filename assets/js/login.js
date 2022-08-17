@@ -56,13 +56,14 @@ $(function () {
                 if (res.status !== 0) {
                     return layer.msg('登陆失败！')
                 }
-                layer.msg(res.message)
 
+                layer.msg('res.message')
                 //登录成功后 需要获取token值 存到 localStorage
                 localStorage.setItem('token', res.token)
 
                 //跳转到首页
                 location.href = '/index.html'
+
             }
         })
 
